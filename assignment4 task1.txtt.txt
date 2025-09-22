@@ -1,0 +1,7 @@
+try:
+    with open("simple.txt", "r") as file:
+        print("reading file content:")
+        for i, line in enumerate(file,start=1):
+            print(f"line {i}: {line.strip()}")
+except FileNotFoundError:
+    print("error: the file 'simple.txt' was not found.")
